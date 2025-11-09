@@ -1,0 +1,64 @@
+{
+  "jobs": [
+    {
+      "id": "5faff16c-7758-48e2-8458-36a4bf7ec7e3",
+      "command": "echo Hello QueueCTL",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 3,
+      "created_at": "2025-11-09T06:05:54.416Z",
+      "updated_at": "2025-11-09T06:06:31.868Z",
+      "next_run_at": "2025-11-09T06:05:54.416Z",
+      "locked_by": null,
+      "locked_at": null,
+      "output": "Hello QueueCTL\r\n"
+    },
+    {
+      "id": "f1bf94b6-c3a3-4057-8960-57774d41143a",
+      "command": "not_a_real_command",
+      "state": "pending",
+      "attempts": 2,
+      "max_retries": 3,
+      "created_at": "2025-11-09T06:08:06.875Z",
+      "updated_at": "2025-11-09T06:11:24.765Z",
+      "next_run_at": "2025-11-09T06:11:28.765Z",
+      "locked_by": null,
+      "locked_at": null,
+      "last_error": "'not_a_real_command' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "id": "8a9573ed-671b-49ae-8e79-5fd0d3da0281",
+      "command": "echo OK",
+      "state": "completed",
+      "attempts": 0,
+      "max_retries": 2,
+      "created_at": "2025-11-09T06:11:12.783Z",
+      "updated_at": "2025-11-09T06:11:13.452Z",
+      "next_run_at": "2025-11-09T06:11:12.783Z",
+      "locked_by": null,
+      "locked_at": null,
+      "output": "OK\r\n"
+    },
+    {
+      "id": "58957ce8-b12d-41c5-ace1-ed11f2ce8db2",
+      "command": "not_a_command",
+      "state": "dead",
+      "attempts": 3,
+      "max_retries": 2,
+      "created_at": "2025-11-09T06:11:12.901Z",
+      "updated_at": "2025-11-09T06:11:19.604Z",
+      "next_run_at": null,
+      "locked_by": null,
+      "locked_at": null,
+      "last_error": "'not_a_command' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    }
+  ],
+  "dlq": [
+    {
+      "id": "58957ce8-b12d-41c5-ace1-ed11f2ce8db2",
+      "moved_at": "2025-11-09T06:11:19.604Z",
+      "last_error": "'not_a_command' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "command": "not_a_command"
+    }
+  ]
+}
