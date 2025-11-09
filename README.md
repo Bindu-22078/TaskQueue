@@ -17,13 +17,21 @@ This CLI tool allows you to:
 🧩 Folder Structure
 
 TaskQueueCLI/
+
 ├── main.js             # CLI entry point
+
 ├── taskManager.js      # Core queue management logic
+
 ├── taskWorker.js       # Background job executor
+
 ├── settings.json       # Configuration (retries, timeout, etc.)
+
 ├── tasks.json          # Job + DLQ data
+
 ├── helpers/
+
 │   └── fileLock.js     # File locking utility
+
 └── job-logs/           # Stores job output and logs
 
 
@@ -86,4 +94,5 @@ Starting 2 worker(s)...
 ✅ Job echo Hello TaskQueueCLI completed
 🔁 Job not_a_real_command failed → will retry
 ☠️ Job not_a_real_command moved to DLQ
+
 
